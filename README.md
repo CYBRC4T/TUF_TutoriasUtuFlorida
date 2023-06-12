@@ -5,7 +5,7 @@
 
 - Integrantes del equipo: Irina Ladereche, Elías Pereyra, Stiven Chagias.
 
-1. Archivos dentro del repositorio:
+- Archivos dentro del repositorio:
    -  Página de TUF
    -  Página de la empresa (Cybercat)
    -  Registro de reuniones
