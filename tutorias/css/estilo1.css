@@ -9,7 +9,7 @@ body {
   overflow: hidden;
 }
 
-/* ---------------------------------------------------------------------- */
+/* ---------------------------------| <nav> |---------------------------------- */
 
 nav {
   z-index: 8;
@@ -18,11 +18,11 @@ nav {
   background-color: #b5e48c;
   border-bottom: 0.5vh solid #76c893;
   width: 100%;
-  height: 10vh;
+  height: 7vh;
 }
 
 p {
-  font-size: 3vh;
+  font-size: 2.5vh;
   margin: auto 1vw;
   font-weight: bolder;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
@@ -31,23 +31,24 @@ p {
 
 img {
   margin: auto 1vw;
-  padding: 2vh 0;
-  height: 3vw;
+  padding: 1vh 0;
+  height: 2.5vw;
 }
 .cybercat {
-  width: 5vw;
-  padding: 2vh 0;
+  width: 4.5vw;
+  padding: 1vh 0;
   margin: auto 1vw auto 2vw;
 }
 
 .divisor {
   background-color: black;
-  width: 0.1vw;
-  margin: 0px 1.9vw;
+  width: 0.05vw;
+  margin: 0px 1vw;
   padding: 1vh 0.05vh;
 }
 
-/* ---------------------------------------------------------------------- */
+/* ---------------------------| Botones Centrales |------------------------------- */
+
 hr {
   width: 90%;
   margin: 0 auto;
@@ -74,10 +75,13 @@ a.ventanas {
   padding: 2vh;
   background-color: #52b69a;
   border-right: 0.4vh solid black;
-  border-bottom: 0.4vh solid #52b69a;
+  border-left: 0.4vh solid black;
   text-decoration: none;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+#boton.ventanas{
+  border-left: none;
 }
 a.ventanas:visited {
   color: white;
@@ -92,6 +96,7 @@ a.ventanas2 {
   padding: 2vh;
   margin-left: -0.15vw;
   background-color: #44967e;
+  border-left: 0.4vh solid #44967e;
   border-bottom: 0.4vh solid black;
   text-decoration: none;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
@@ -102,29 +107,59 @@ a.ventanas2:visited {
   text-decoration: none;
 }
 
-/* ---------------------------------------------------------------------- */
+/* ----------------------------------| Todo |-------------------------------- */
 
 .container {
-  height: 89.6vh;
+  height: 97.6vh;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 10fr 2fr;
+  grid-template-rows: 1fr 12fr 2fr;
 }
-.materias {
+.pageSwitch {
   margin: 0;
   z-index: 1;
   height: 100%;
-  flex-direction: row;
   display: grid;
+  flex-direction: row;
   grid-template-columns: 3fr 1fr;
   background-color: bisque;
 }
-section {
+.tutorias {
+  z-index: 1;
+  height: 100%;
+  display: grid;
+  position: relative;
+  margin-right: 10vw;
+  border-radius: 0 5vh 5vh 0;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 12fr 2fr;
+  background-color: rgb(225, 237, 240);
+}
+.tutorias2 {
   z-index: 1;
   height: 100%;
   position: relative;
-  border-radius: 0 5vh 5vh 0;
   margin-right: 10vw;
+  display: none;
+  border-radius: 0 5vh 5vh 0;
+  background-color: rgb(225, 237, 240);
+}
+.materias {
+  z-index: 1;
+  height: 100%;
+  position: relative;
+  margin-right: 10vw;
+  display: none;
+  border-radius: 0 5vh 5vh 0;
+  background-color: rgb(225, 237, 240);
+}
+.materias2 {
+  z-index: 1;
+  height: 100%;
+  position: relative;
+  margin-right: 10vw;
+  visibility: visible;
+  border-radius: 0 5vh 5vh 0;
   background-color: rgb(225, 237, 240);
 }
 aside {
@@ -135,7 +170,7 @@ aside {
   background-color: rgb(225, 237, 240);
 }
 
-/* ---------------------------------------------------------------------- */
+/* ----------------------------| Valores Default |----------------------------- */
 
 a {
   color: rgb(88, 102, 231);
@@ -158,16 +193,17 @@ h4 {
   align-self: center;
 }
 
-/* ---------------------------------------------------------------------- */
+/* --------------------------------| <footer> |-------------------------------- */
 
 footer {
   margin: 0;
+  height: 8vh;
   padding: 1vh 1vw;
   position: relative;
   background-color: #43a589;
 }
 
-/* ---------------------------------------------------------------------- */
+/* ------------------------------| Datos Extra |-------------------------------- */
 
 .material-symbols-outlined {
   bottom: -2;
