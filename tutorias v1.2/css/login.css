@@ -1,0 +1,188 @@
+body{
+    margin: 0;
+    background-color: cornflowerblue;
+}
+
+/*---------------------------------------| <nav> |----------------------------------------*/
+
+nav{
+    margin: 0;
+    display: flex;
+    padding: 2vh 2vw;
+    flex-direction: row;
+    background-color: dodgerblue;
+}
+
+nav .cybercat{
+    margin: 0;
+    width: 10vh;
+    height: auto;
+}
+
+nav img{
+    margin: 0;
+    width: 6vh;
+    height: auto;
+}
+
+nav hr{
+    width: 0;
+    margin: 0 3vw;
+    height: 100%;
+    padding: 3vh 0;
+    border: 0.2vh solid rgb(38, 37, 43);
+}
+
+/* ---------------------------------------| Centro |--------------------------------------*/
+
+.loginLogo{
+    position: absolute;
+    width: 8vw;
+    height: auto;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container{
+    top: 60%;
+    left: 50%;
+    width: 35%;
+    height: 55%;
+    overflow: hidden;
+    position: absolute;
+    border-radius: 1.5vh;
+    transform: translate(-50%, -50%);
+    border-left: 0.4vh solid rgb(68, 68, 68);
+    border-bottom: 0.4vh solid rgb(68, 68, 68);
+}
+
+.changeBtn{
+    display: grid;
+    grid-template-columns: 3fr 1fr 4fr;
+}
+.changeBtn .selected{
+    font-size: 2vh;
+    cursor: pointer;
+    padding: 1vh 1vw;
+    text-align: center;
+    font-weight: bolder;
+    font-family: monospace;
+    background-color: aliceblue;
+    border-top: 0.4vh solid rgb(68, 68, 68);
+    border-right: 0.4vh solid rgb(68, 68, 68);
+}
+.changeBtn #btn1{
+    border-top-left-radius: 1.5vh;
+}
+.changeBtn #btn2{
+    border-top-right-radius: 1.5vh;
+}
+.changeBtn .notSelected{
+    font-size: 2vh;
+    cursor: pointer;
+    padding: 1vh 1vw;
+    text-align: center;
+    font-weight: bolder;
+    font-family: monospace;
+    background-color: rgb(201, 207, 212);
+    border-top: 0.4vh solid rgb(68, 68, 68);
+    border-right: 0.4vh solid rgb(68, 68, 68);
+    border-bottom: 0.4vh solid rgb(68, 68, 68);
+}
+
+.changeBtn .fill{
+    border-bottom: 0.4vh solid rgb(68, 68, 68);
+}
+
+.cardHidden{
+    display: none;
+}
+.loginCard{
+    top: 9.2%;
+    left: 0;
+    right: 0;
+    bottom: -0.2%;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    background-color: azure;
+    border-bottom-right-radius: 1.5vh;
+    border-right: 0.4vh solid rgb(68, 68, 68);
+}
+.loginCard h2{
+    font-size: 2.5vh;
+    text-align: center;
+    margin-bottom: 10vh;
+}
+
+.signupCard{
+    top: 9.2%;
+    left: 0;
+    right: 0;
+    bottom: -0.2%;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    background-color: azure;
+    border-bottom-right-radius: 1.5vh;
+    border-right: 0.4vh solid rgb(68, 68, 68);
+    overflow: scroll;
+}
+.signupCard h2{
+    font-size: 2.5vh;
+    text-align: center;
+    margin-bottom: 2vh;
+}
+
+label{
+    margin-top: 2vh;
+    margin-left: 3.5vw;
+}
+
+form{
+    height: 90%;
+    display: flex;
+    width: inherit;
+    flex-direction: column;
+}
+
+.formInput {
+    width: 80%;
+    display: flex;
+    margin-left: 10%;
+    flex-direction: row;
+}
+.formInput img{
+    width: 4vh;
+    padding: 0 0.5vw;
+    height: auto;
+    background-color: white;
+    border: 0.2vh solid rgb(68, 68, 68);
+    border-right: none;
+    border-radius: 1vh 0 0 1vh;
+}
+.formInput #img2{
+    width: 3vh;
+    padding: 0.5vh 0.75vw;
+    height: auto;
+    background-color: white;
+    border: 0.2vh solid rgb(68, 68, 68);
+    border-right: none;
+    border-radius: 1vh 0 0 1vh;
+}
+.formInput input{
+    width: 100%;
+    font-size: 1.5vh;
+    padding: 1vh 2vh;
+    border-radius: 0 1vh 1vh 0;
+    border: 0.2vh solid rgb(68, 68, 68);
+}
+form input[type="submit"]{
+    padding: 0.5vh;
+    margin-top: 8vh;
+    font-size: 1.5vh;
+    width: fit-content;
+    margin-right: 3.5vw;
+    align-self: flex-end;
+}
