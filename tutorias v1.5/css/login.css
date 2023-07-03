@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=K2D:wght@500&family=Libre+Baskerville:wght@700&display=swap');
+
+:root{
+    --azul1: #2F3678;
+    --azul2: #4059AD;
+    --azul3: #4FA6F1;
+    --blanco1: #EFF2F1;
+    --blanco2: #E2E4E3;
+    --amarillo: #F4B942;
+    --negro: rgb(68, 68, 68);
+    --rojo: rgb(200, 68, 68);
+
+    --botonFont: monospace;
+    --tituloFont: 'K2D', sans-serif;
+    --textoFont: 'Libre Baskerville', serif;
+}
+
+body{
+    margin: 0;
+    overflow: hidden;
+    background-size: cover;
+    background-image: url(../img/loginBG.jpg);
+}
+
+/*Webkit*/
+::-webkit-scrollbar {
+    width: 0.8vw;
+}
+::-webkit-scrollbar-track-piece {
+    border-radius: 0.5vw;
+    background-color: var(--azul1);
+    background-clip: content-box;
+    border: solid 0.5vh transparent;
+}
+::-webkit-scrollbar-track-piece:decrement {
+    background: var(--amarillo);
+    background-clip: content-box;
+    border: solid 0.5vh transparent;
+}
+::-webkit-scrollbar-thumb  {
+    background-color: var(--azul2);
+    border-radius: 0.9vh;
+    box-shadow: 0 0 1.5vh 0.1vh rgba(51,0,51,0.5);
+}
+
+/* ---------------------------------------| Centro |--------------------------------------*/
+
+hr {
+    width: 40%;
+    margin: 0 auto;
+    margin-bottom: 10vh;
+    border-width: 0.05vh;
+    border-color: black;
+}
+
+.logoBG{
+    top: 20%;
+    left: 50%;
+    width: 15vh;
+    height: 15vh;
+    padding: 2vh;
+    position: absolute;
+    border-radius: 45%;
+    background-color: var(--blanco1);
+    transform: translate(-50%, -50%);
+}
+
+.loginLogo{
+    width: 15vh;
+    border-radius: 30%;
+    position: relative;
+}
+
+.container{
+    width: 35%;
+    height: 55%; 
+    display: grid;
+    overflow: hidden;
+    margin: 35vh auto;
+    position: relative;
+    border-radius: 1.5vh;
+    grid-template-rows: 1fr 10.5fr;
+    border-left: 0.4vh solid var(--negro);
+    border-bottom: 0.4vh solid var(--negro);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.changeBtn{
+    z-index: 2;
+    display: grid;
+    max-height: 4.65vh;
+    grid-template-columns: 3fr 1fr 4fr;
+}
+.changeBtn .selected{
+    font-size: 2vh;
+    cursor: pointer;
+    padding: 1vh 1vw;
+    text-align: center;
+    font-weight: bolder;
+    font-family: var(--botonFont);
+    background-color: var(--blanco1);
+    border-top: 0.4vh solid var(--negro);
+    border-right: 0.4vh solid var(--negro);
+    border-bottom: 0.4vh solid var(--blanco1);
+}
+.changeBtn #btn1{
+    border-top-left-radius: 1.5vh;
+}
+.changeBtn #btn2{
+    border-top-right-radius: 1.5vh;
+}
+.changeBtn .notSelected{
+    font-size: 2vh;
+    cursor: pointer;
+    padding: 1vh 1vw;
+    max-height: 2.3vh;
+    text-align: center;
+    font-weight: bolder;
+    font-family: var(--botonFont);
+    background-color: var(--blanco2);
+    border-top: 0.4vh solid var(--negro);
+    border-right: 0.4vh solid var(--negro);
+    border-bottom: 0.4vh solid var(--negro);
+}
+
+.changeBtn .fill{
+    max-height: 4.65vh;
+    border-bottom: 0.4vh solid var(--negro);
+}
+
+.cardHidden{
+    display: none;
+}
+.loginCard{
+    display: flex;
+    position: relative;
+    overflow-x: hidden;
+    flex-direction: column;
+    background-color: var(--blanco1);
+    border-bottom-right-radius: 1.5vh;
+    border-right: 0.4vh solid var(--negro);
+}
+.loginCard h2{
+    font-size: 2.5vh;
+    text-align: center;
+    font-family: var(--tituloFont);
+}
+
+.signupCard{
+    display: flex;
+    overflow: scroll;
+    position: relative;
+    overflow-x: hidden;
+    flex-direction: column;
+    background-color: var(--blanco1);
+    border-bottom-right-radius: 1.5vh;
+    border-right: 0.4vh solid var(--negro);
+}
+.signupCard h2{
+    font-size: 2.5vh;
+    text-align: center;
+    font-family: var(--tituloFont);
+}
+.signupCard hr{
+    margin-bottom: 2vh;
+}
+.signupCard input[type='submit']{
+    margin-top: 4vh!important;
+}
+
+#passMatch.show {
+    font-size: 1.8vh;
+    font-weight: bold;
+    font-family: var(--textoFont);
+    margin: 3vh 0 -1vh 7.5vh;
+    color: var(--rojo);
+}
+
+#passMatch.hide {
+    display: none;
+}
+
+label{
+    font-size: 2vh;
+    margin-top: 2vh;
+    margin-left: 10%;
+    font-family: var(--textoFont);
+}
+
+form{
+    height: 90%;
+    display: flex;
+    width: inherit;
+    flex-direction: column;
+}
+
+.formInput {
+    width: 80%;
+    display: flex;
+    margin-left: 10%;
+    flex-direction: row;
+}
+.formInput i{
+    width: 4vh;
+    padding: 0.5vh 1vh;
+    font-size: 3vh;
+    background-color: var(--blanco1);
+    border: 0.2vh solid var(--negro);
+    border-right: none;
+    text-align: center;
+    border-radius: 1vh 0 0 1vh;
+}
+.formInput input{
+    width: 100%;
+    font-size: 1.5vh;
+    padding: 1vh 2vh;
+    border-radius: 0 1vh 1vh 0;
+    font-family: var(--textoFont);
+    border: 0.2vh solid var(--negro);
+}
+form input[type="submit"]{
+    padding: 0.5vh;
+    margin-top: 8vh;
+    font-size: 1.5vh;
+    width: fit-content;
+    margin-right: 3.5vw;
+    align-self: flex-end;
+    font-family: var(--botonFont);
+}
+
+@media screen and (max-width: 1000px){
+    .changeBtn{
+        grid-template-columns: 3fr 1fr 2fr;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .changeBtn{
+        grid-template-columns: 3fr 1fr 0fr;
+    }
+}
+
+@media screen and (min-device-width: 1024px) {
+    .container{
+        width: 40%;
+    }
+}
+
+@media screen and (max-device-width: 768px) {
+    .container{
+        width: 70%;
+    }
+}
+
+@media screen and (max-device-width: 425px) {
+    .container{
+        width: 90%;
+    }
+    .changeBtn{
+        z-index: 2;
+        display: grid;
+        max-height: 4.65vh;
+        grid-template-columns: 3fr 1fr 0.5fr;
+    }
+}
+
+@media screen and (max-device-width: 320px) {
+    .container{
+        margin: 23vh 0;
+        width: 100%;
+    }
+    .changeBtn{
+        z-index: 2;
+        display: grid;
+        max-height: 4.65vh;
+        grid-template-columns: 4fr 1fr!important;
+    }
+    .changeBtn .fill{
+        display: none;
+    }
+}
