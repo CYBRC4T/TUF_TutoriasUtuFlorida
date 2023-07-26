@@ -1,0 +1,11 @@
+Cuenta Estudiante:
+C.I: 55746914
+Contra: 123
+
+Cuenta Docente:
+C.I: 87654321
+Contra: 123
+
+Cuenta Admin:
+C.I: 23550000
+Contra: 123
