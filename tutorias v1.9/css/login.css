@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@700&family=K2D:wght@500&family=Titillium+Web&display=swap');
+
+:root {
+    --azul1: #2F3678;
+    --azul2: #3b529e;
+    --azul3: #4FA6F1;
+    --azul4: #438bc9;
+    --azul5: #336ea2;
+    --azul6: #4866ca;
+    --blanco1: #EFF2F1;
+    --blanco2: #E2E4E3;
+    --amarillo: #F4B942;
+    --negro: rgb(68, 68, 68);
+    --negro2: rgb(20, 20, 20);
+    --rojo: rgb(200, 68, 68);
+    --rojo2: rgb(236, 69, 69);
+
+    --tituloFont: 'K2D', sans-serif;
+    --botonFont: 'Hind Siliguri', sans-serif;
+    --textoFont: 'Titillium Web', sans-serif;
+
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    background-size: cover;
+    background-clip: content-box;
+    background-repeat: no-repeat;
+    background-image: url(../img/loginBg.png);
+}
+
+.bgBlur {
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backdrop-filter: blur(0.5vh);
+}
+
+::-webkit-scrollbar {
+    width: 0.8vw;
+}
+
+::-webkit-scrollbar-track-piece {
+    border-radius: 0.5vw;
+    background-color: var(--azul1);
+    background-clip: content-box;
+    border: solid 0.5vh transparent;
+}
+
+::-webkit-scrollbar-track-piece:decrement {
+    background: var(--amarillo);
+    background-clip: content-box;
+    border: solid 0.5vh transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--azul2);
+    border-radius: 0.9vh;
+    box-shadow: 0 0 1.5vh 0.1vh rgba(51, 0, 51, 0.5);
+}
+
+/* ---------------------------------------| Centro |--------------------------------------*/
+
+hr {
+    width: 40%;
+    margin: 0 auto;
+    margin-bottom: 10vh;
+    border-width: 0.05vh;
+    border-color: black;
+}
+
+.logoBG {
+    top: 20%;
+    left: 50%;
+    width: 20vh;
+    height: 20vh;
+    padding: 2vh;
+    position: absolute;
+    border-radius: 100%;
+    backdrop-filter: sepia(20%);
+    border: 0.4vh solid var(--negro);
+    transform: translate(-50%, -50%);
+}
+
+.loginLogo {
+    height: auto;
+    width: inherit;
+    margin: 0 auto;
+    border-radius: 30%;
+    position: relative;
+    transform: translate(0, 12%);
+}
+
+.container {
+    width: 35%;
+    height: 55%;
+    opacity: 80%;
+    display: grid;
+    overflow: hidden;
+    margin: 35vh auto;
+    position: relative;
+    border-radius: 1.5vh;
+    grid-template-rows: 1fr 10.5fr;
+    border-left: 0.4vh solid var(--negro);
+    border-bottom: 0.4vh solid var(--negro);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.changeBtn {
+    z-index: 2;
+    display: grid;
+    max-height: 4.65vh;
+    grid-template-columns: 3fr 1fr 4fr;
+}
+
+.changeBtn .selected {
+    font-size: 1.54vh;
+    cursor: pointer;
+    padding: 1vh 1vw;
+    text-align: center;
+    font-weight: bolder;
+    font-family: var(--botonFont);
+    background-color: var(--blanco1);
+    border-top: 0.4vh solid var(--negro);
+    border-right: 0.4vh solid var(--negro);
+    border-bottom: 0.4vh solid var(--blanco1);
+}
+
+.changeBtn #btn1 {
+    border-top-left-radius: 1.5vh;
+}
+
+.changeBtn #btn2 {
+    border-top-right-radius: 1.5vh;
+}
+
+.changeBtn .notSelected {
+    font-size: 1.54vh;
+    cursor: pointer;
+    padding: 1vh 1vw;
+    max-height: 2.3vh;
+    text-align: center;
+    font-weight: bolder;
+    font-family: var(--botonFont);
+    background-color: var(--blanco2);
+    border-top: 0.4vh solid var(--negro);
+    border-right: 0.4vh solid var(--negro);
+    border-bottom: 0.4vh solid var(--negro);
+}
+
+.changeBtn .fill {
+    max-height: 4.65vh;
+    border-bottom: 0.4vh solid var(--negro);
+}
+
+.cardHidden {
+    display: none;
+}
+
+.loginCard {
+    display: flex;
+    position: relative;
+    overflow-x: hidden;
+    flex-direction: column;
+    background-color: var(--blanco1);
+    border-bottom-right-radius: 1.5vh;
+    border-right: 0.4vh solid var(--negro);
+}
+
+.loginCard h2 {
+    font-size: 2.5vh;
+    text-align: center;
+    font-family: var(--tituloFont);
+}
+
+.signupCard {
+    display: flex;
+    overflow: scroll;
+    position: relative;
+    overflow-x: hidden;
+    flex-direction: column;
+    background-color: var(--blanco1);
+    border-bottom-right-radius: 1.5vh;
+    border-right: 0.4vh solid var(--negro);
+}
+
+.signupCard h2 {
+    font-size: 2.5vh;
+    text-align: center;
+    font-family: var(--tituloFont);
+}
+
+.signupCard hr {
+    margin-bottom: 2vh;
+}
+
+.signupCard input[type='submit'] {
+    margin-top: 4vh !important;
+}
+
+#passMatch.show {
+    font-size: 1.8vh;
+    font-weight: bold;
+    font-family: var(--textoFont);
+    margin: 3vh 0 -1vh 7vh;
+    color: var(--rojo);
+}
+
+#passMatch.hide {
+    display: none;
+}
+
+label {
+    font-size: 2vh;
+    margin-top: 2vh;
+    margin-left: 10%;
+    font-family: var(--textoFont);
+}
+
+form {
+    height: 90%;
+    display: flex;
+    width: inherit;
+    flex-direction: column;
+}
+
+.formInput {
+    width: 80%;
+    display: flex;
+    margin-left: 10%;
+    flex-direction: row;
+}
+
+.formInput i {
+    width: 4vh;
+    padding: 0.5vh 1vh;
+    font-size: 3vh;
+    background-color: var(--blanco1);
+    border: 0.2vh solid var(--negro);
+    border-right: none;
+    text-align: center;
+    border-radius: 1vh 0 0 1vh;
+}
+
+.formInput input {
+    width: 100%;
+    font-size: 2vh;
+    padding: 0.5vh 2vh;
+    border-radius: 0 1vh 1vh 0;
+    font-family: var(--textoFont);
+    border: 0.2vh solid var(--negro);
+}
+
+form input[type="submit"] {
+    font-size: 2vh;
+    color: #090909;
+    padding: 1vh 2vh;
+    border-radius: 2vh;
+    margin: 3vh 7vh 0 0;
+    align-self: flex-end;
+    background: #e8e8e8;
+    border: 1px solid #e8e8e8;
+    box-shadow: 6px 6px 12px #c5c5c5,
+        -6px -6px 12px #ffffff;
+
+    transition: all .3s;
+}
+
+form input[type="submit"]:active {
+    color: #666;
+    box-shadow: inset 4px 4px 12px #c5c5c5,
+        inset -4px -4px 12px #ffffff;
+}
+
+.container#act {
+    width: 60%;
+    height: 70vh;
+    opacity: 100%;
+    margin: 15vh auto;
+    border: 0.4vh solid var(--negro);
+}
+
+.grid {
+    width: 100%;
+    height: 70vh;
+    display: grid;
+    background-color: var(--blanco2);
+}
+
+.item {
+    padding: 3vh 2.5vh;
+    display: flex;
+    font-size: 2.3vh;
+    flex-direction: row;
+    align-items: center;
+    font-family: var(--textoFont);
+    border-right: 0.2vh solid var(--negro);
+    border-bottom: 0.2vh solid var(--negro);
+}
+
+.act {
+    top: 0%;
+    left: 50%;
+    z-index: 2;
+    font-size: 5vh;
+    position: fixed;
+    padding: 1vh 2vh;
+    border-radius: 2vh;
+    transform: translateX(-50%);
+    font-family: var(--tituloFont);
+    background-color: var(--blanco2);
+}
+
+.bgBlur#act {
+    height: 105%;
+}
+
+.item p {
+    margin-right: 1vh;
+}
+
+.item input {
+    width: 100%;
+    border: none;
+    padding: 2vh;
+    font-size: 2vh;
+    cursor: pointer;
+    border-radius: 2vh;
+    color: var(--azul6);
+    background-color: #eee;
+    box-shadow: 0 1vh #d9dadf;
+}
+
+.item input:focus {
+    outline-color: var(--azul6);
+}
+
+a.actualizar {
+    top: 90%;
+    left: 36%;
+    border: 0;
+    display: flex;
+    font-weight: bold;
+    border-radius: 1vh;
+    position: absolute;
+    padding: 1.1vh 3vh;
+    color: var(--negro);
+    align-items: center;
+    text-decoration: none;
+    background: var(--blanco1);
+    transition: 0.2s background;
+    font-family: var(--botonFont);
+    border: 0.4vh solid var(--negro);
+}
+
+a.actualizar:nth-last-child(2) {
+    left: initial;
+    right: 36%;
+}
+
+a.actualizar:hover {
+    color: var(--azul1);
+    background-color: var(--blanco2);
+}
+
+a.actualizar:visited {
+    text-decoration: none;
+}
+
+
+
+@media screen and (max-width: 1000px) {
+    .changeBtn {
+        grid-template-columns: 3fr 1fr 2fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .changeBtn {
+        grid-template-columns: 3fr 1fr 0fr;
+    }
+}
+
+@media screen and (min-device-width: 1080px) {
+    .container {
+        width: 35%;
+    }
+}
+
+@media screen and (max-device-width: 1024px) {
+    .container {
+        width: 50%;
+    }
+}
+
+@media screen and (max-device-width: 768px) {
+    .container {
+        width: 70%;
+    }
+}
+
+@media screen and (max-device-width: 425px) {
+    .container {
+        width: 90%;
+    }
+
+    .changeBtn {
+        z-index: 2;
+        display: grid;
+        max-height: 4.65vh;
+        grid-template-columns: 3fr 1fr 0.5fr;
+    }
+}
+
+@media screen and (max-device-width: 320px) {
+    .container {
+        width: 100%;
+        margin: 40vh 0 10vh 0;
+    }
+
+    .changeBtn {
+        z-index: 2;
+        display: grid;
+        max-height: 4.65vh;
+        grid-template-columns: 4fr 1fr !important;
+    }
+
+    .changeBtn .fill {
+        display: none;
+    }
+}
