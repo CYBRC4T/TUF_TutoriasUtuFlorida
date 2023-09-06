@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@700&family=K2D:wght@500&family=Titillium+Web&display=swap');
+:root{
+    --azul1: #2F3678;
+    --azul2: #3b529e;
+    --azul3: #4FA6F1;
+    --azul4: #438bc9;
+    --azul5: #336ea2;
+    --azul6: #4866ca;
+    --blanco1: #EFF2F1;
+    --blanco2: #E2E4E3;
+    --amarillo: #F4B942;
+    --negro: rgb(68, 68, 68);
+    --negro2: rgb(20, 20, 20);
+    --rojo: rgb(200, 68, 68);
+    --rojo2: rgb(236, 69, 69);
+
+    --tituloFont: 'K2D', sans-serif;
+    --botonFont: 'Hind Siliguri', sans-serif;
+    --textoFont: 'Titillium Web', sans-serif;
+
+}
+
+* {
+    z-index: 1;
+    position: relative;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    background-image: url("../img/error.png");
+}
+
+nav {
+    padding: 0.5vh;
+    background-color: var(--azul2);
+    border-bottom: 0.4vh solid var(--azul1);
+}
+
+h1 {
+    font-size: 4vh;
+    position: relative;
+    text-align: center;
+    color: var(--blanco1);
+    font-family: var(--tituloFont);
+}
+h2 {
+    margin: 0;
+    font-size: 10vh;
+    position: relative;
+    text-align: center;
+    color: var(--rojo2);
+    font-family: var(--textoFont);
+}
+h4 {
+    left: 10%;
+    right: 10%;
+    bottom: 5%;
+    margin: auto;
+    font-size: 2.3vh;
+    text-align: center;
+    color: var(--blanco1);
+    position: absolute!important;
+    font-family: var(--tituloFont);
+}
+
+img {
+    z-index: 0!important;
+    position: absolute!important;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: auto;
+}
